@@ -1,3 +1,3 @@
 This program builds a list of pointer-linked node classes that each contain values specified by the user. Each time the user enters a number,
 a new node is created to store that number and then linked to the existing list object via pointer in non contiguous memory. Then the list is recursively sorted via
-selection sort or merge sort. Prime numbers are also detected and displayed at the end.
+selection sort or merge sort algorithms. Prime numbers are also detected and displayed at the end.
