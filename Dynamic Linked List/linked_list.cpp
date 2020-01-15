@@ -49,11 +49,11 @@ int Linked_List<T>::get_length() {
 template<class T>
 unsigned int Linked_List<T>::push_front(T n) {
 Node<T>* new_node = new Node<T>;
-new_node->data = n;
-new_node->next = headptr;
-headptr = new_node;
-length++;
-return length;
+   new_node->data = n;
+   new_node->next = headptr;
+   headptr = new_node;
+   length++;
+   return length;
 }
 
 /*********************************************************************
