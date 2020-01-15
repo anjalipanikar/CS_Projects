@@ -8,7 +8,7 @@ using namespace std;
 
 /*********************************************************************
  * Function: print()
- * Description: follows each node pointer, then retreievs data value from
+ * Description: follows each node pointer, then retrieves data value from
    nodes and prints to screen
  * Parameters: none
  * Pre-Conditions: an existing linked list
