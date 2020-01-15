@@ -210,13 +210,13 @@ void Linked_List<T>::sort_descending() {
 
 template<class T>
 Node<T>* Linked_List<T>::merge(Node<T>* h1, Node<T>* h2) {
-	Node<T> *temp;
+   Node<T> *temp;
 
-	if(h1 == NULL)
-		return h2;
+   if(h1 == NULL)
+	return h2;
 
-	if(h2 == NULL)
-		return h1;
+   if(h2 == NULL)
+	return h1;
 
   if(h1->data > h2->data) {
       temp = h2;
@@ -226,7 +226,7 @@ Node<T>* Linked_List<T>::merge(Node<T>* h1, Node<T>* h2) {
     temp->next = merge(h1->next, h2);
     }
 
-	return temp;
+    return temp;
 }
 
 /*********************************************************************
@@ -240,33 +240,26 @@ Node<T>* Linked_List<T>::merge(Node<T>* h1, Node<T>* h2) {
 template<class T>
 void Linked_List<T>::merge_sort(Node<T>** headptr) {
   Node<T>* first = *headptr;
-	Node<T>* temp = *headptr;
+  Node<T>* temp = *headptr;
   Node<T> *second;
 
-	if(first == NULL || first->next == NULL)
-	{
-		return;
-	}
-	else
-	{
-		while(first->next != NULL)
-		{
-			first = first->next;
-			if(first->next != NULL)
-			{
-				temp = temp->next;
-				first = first->next;
-			}
+  if(first == NULL || first->next == NULL){
+    return;
+  } else {
+          while(first->next != NULL) {
+      	 	first = first->next;
+		if(first->next != NULL) {
+	   		temp = temp->next;
+	   		first = first->next;
 		}
-		second = temp->next;
-		temp->next = NULL;
-		first = *headptr;
-	}
-
-	merge_sort(&first);
-	merge_sort(&second);
-
-	*headptr = merge(first, second);
+          }
+	  second = temp->next;
+	  temp->next = NULL;
+	  first = *headptr;
+  }
+  merge_sort(&first);
+  merge_sort(&second);
+  *headptr = merge(first, second);
 }
 
 /********************************************************************************
